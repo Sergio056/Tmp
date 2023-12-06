@@ -1,0 +1,196 @@
+{
+  "Content": {
+    "Name": "SK template",
+    "ShortDescription": "For variables testing...",
+    "Description": "For variables testing...Test reupload",
+    "Version": "1.0.2",
+    "TransferVersion": 3,
+    "TemplateVersion": 1,
+    "Created": "2023-11-20T13:34:33.7936793Z",
+    "Tasks": [
+      {
+        "Description": null,
+        "Type": 1,
+        "Cron": "0 0 * ? * * *",
+        "Priority": 99,
+        "DisposeData": false,
+        "IsRunnable": true,
+        "MaxInstances": 1,
+        "TaskRunSuccessDays": null,
+        "TaskRunFailedDays": null,
+        "TimeSchedule": null,
+        "TaskGroupCopyID": null,
+        "Steps": [
+          {
+            "Timeout": 60,
+            "InputProcessType": 2,
+            "InputProcessThreads": null,
+            "StopIfEmptyOutput": true,
+            "ConnectorStorageSize": 10,
+            "DataSnapshotCondition": 1,
+            "InputSchemaMapping": null,
+            "ErrorBehavior": 1,
+            "InputDataFilter": null,
+            "IsTempDeactivated": false,
+            "Attempts": 1,
+            "AttemptsDelay": 5,
+            "Connector": {
+              "Guid": "1bea42f2-ca51-4ca7-9585-f10323a1d804",
+              "Version": "3.2.3"
+            },
+            "AgentCopyID": null,
+            "PrevStepCopyID": null,
+            "InputSchema": null,
+            "OutputSchema": {
+              "Guid": "b76c3662-4903-4512-97a9-72f32eaecd01",
+              "Version": "1.0.0"
+            },
+            "Configurations": [
+              {
+                "ConfigurationCopyID": "54e86285-a690-4fb8-8d05-2572595bcf94",
+                "ConfigurationSchema": {
+                  "Guid": "ab00eb5f-e86e-4107-b8cd-b151a204c4c6",
+                  "Version": "1.0.5"
+                },
+                "ID": 8,
+                "Name": null,
+                "CopyID": "96ba0f54-8017-41ab-b0de-cc2e5ea28c61"
+              }
+            ],
+            "ID": 9,
+            "Name": "Step #1",
+            "CopyID": "ec3bda6e-e833-477b-93f5-be95c7137df1"
+          }
+        ],
+        "ID": 12,
+        "Name": "task with more variables",
+        "CopyID": "e3b3beef-c38a-4b05-966a-3d95d56199b1"
+      }
+    ],
+    "Connectors": [
+      {
+        "Name": "JS Mapper",
+        "Guid": "1bea42f2-ca51-4ca7-9585-f10323a1d804",
+        "Version": "3.2.3"
+      }
+    ],
+    "DataSchemas": [
+      {
+        "Columns": [
+          {
+            "Order": 1,
+            "Type": 2,
+            "AllowNull": false,
+            "ID": 0,
+            "Name": "Text",
+            "CopyID": "3c6fd3bf-0a76-4241-8a35-04b73ed9acde"
+          }
+        ],
+        "ID": 14,
+        "Guid": "b76c3662-4903-4512-97a9-72f32eaecd01",
+        "Version": "1.0.0",
+        "Name": "Text",
+        "CopyID": "82f5a1ee-3992-400d-9d0a-c8c830bd5fc0"
+      }
+    ],
+    "Agents": [],
+    "TaskGroups": [],
+    "EndpointGroups": [],
+    "Endpoints": [],
+    "SecondaryTokens": [],
+    "Configurations": [
+      {
+        "Configuration": "{\"Statement\":\"return [\\r\\n{\\r\\n\\\"Text\\\":\\\"${#t1}${#ta}\\\"\\r\\n},\\r\\n{\\r\\n\\\"Text\\\":\\\"${#t2}${#t30}\\\"\\r\\n},\\r\\n{\\r\\n\\\"Text\\\":\\\"${#t3}${#tb}\\\"\\r\\n}\\r\\n]\"}",
+        "IsShared": false,
+        "ConfigurationSchema": {
+          "Guid": "ab00eb5f-e86e-4107-b8cd-b151a204c4c6",
+          "Version": "1.0.5"
+        },
+        "TaskCopyID": "e3b3beef-c38a-4b05-966a-3d95d56199b1",
+        "ID": 7,
+        "Name": "Step #1",
+        "CopyID": "54e86285-a690-4fb8-8d05-2572595bcf94"
+      }
+    ],
+    "Variables": [
+      {
+        "Code": "t1",
+        "Description": "test11",
+        "Value": "test1",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "35c55803-0376-4557-9476-8e3f08eb8f10",
+        "ID": 4,
+        "Name": "t1",
+        "CopyID": "0b21f55d-48d4-45ad-994c-316eb8ae42fb"
+      },
+      {
+        "Code": "t2",
+        "Description": "test22",
+        "Value": "test2",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "376f30eb-f43f-4894-bec0-b12dddec1be1",
+        "ID": 5,
+        "Name": "t2",
+        "CopyID": "53c6ebf6-e90d-4fe9-87d9-647d0e3ee82b"
+      },
+      {
+        "Code": "t3",
+        "Description": "test33",
+        "Value": "test3",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "97ae8659-2bbd-4a82-96e1-8ec240f5d4a2",
+        "ID": 6,
+        "Name": "t3",
+        "CopyID": "960530fe-216d-4704-b661-913314d8e87a"
+      },
+      {
+        "Code": "ta",
+        "Description": "ta",
+        "Value": "ta",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "35c55803-0376-4557-9476-8e3f08eb8f10",
+        "ID": 7,
+        "Name": "ta",
+        "CopyID": "839618b9-1b30-4dfb-baff-8c66d40af435"
+      },
+      {
+        "Code": "tb",
+        "Description": "tb",
+        "Value": "tb",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "376f30eb-f43f-4894-bec0-b12dddec1be1",
+        "ID": 8,
+        "Name": "tb",
+        "CopyID": "bc6c9946-22ed-4441-8703-6f776bc2a20b"
+      },
+      {
+        "Code": "t30",
+        "Description": "t30",
+        "Value": "t30",
+        "IsSensitive": false,
+        "VariableGroupCopyID": "97ae8659-2bbd-4a82-96e1-8ec240f5d4a2",
+        "ID": 9,
+        "Name": "t30",
+        "CopyID": "44598995-ecdb-425b-8bed-98228ce96d10"
+      }
+    ],
+    "EntityComments": [],
+    "VariableGroups": [
+      {
+        "ID": 2,
+        "Name": "G1",
+        "CopyID": "35c55803-0376-4557-9476-8e3f08eb8f10"
+      },
+      {
+        "ID": 3,
+        "Name": "G2",
+        "CopyID": "376f30eb-f43f-4894-bec0-b12dddec1be1"
+      },
+      {
+        "ID": 4,
+        "Name": "G3",
+        "CopyID": "97ae8659-2bbd-4a82-96e1-8ec240f5d4a2"
+      }
+    ]
+  }
+}
